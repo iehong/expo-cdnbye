@@ -1,6 +1,7 @@
 package expo.modules.cdnbye;
 
 import android.app.Activity;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,9 +14,14 @@ import expo.modules.core.interfaces.ReactActivityLifecycleListener;
 
 public class MyLibReactActivityLifecycleListener implements ReactActivityLifecycleListener {
   @Override
-  public void onCreate(Activity activity, Bundle savedInstanceState) throws PackageManager.NameNotFoundException {
+  public void onCreate(Activity activity, Bundle savedInstanceState) {
     var config = new P2pConfig.Builder().trackerZone(TrackerZone.HongKong).insertTimeOffsetTag(0.0).build();
-    var info = activity.getPackageManager().getApplicationInfo(activity.getApplicationInfo().packageName, PackageManager.GET_META_DATA);
+    ApplicationInfo info = null;
+    try {
+      info = activity.getPackageManager().getApplicationInfo(activity.getApplicationInfo().packageName, PackageManager.GET_META_DATA);
+    } catch (PackageManager.NameNotFoundException e) {
+      throw new RuntimeException(e);
+    }
     var token = info.metaData.getString("CDNBYE_TOKEN");
     P2pEngine.init(activity.getApplicationContext(), token, config);
   }

@@ -1,9 +1,18 @@
 {
-  "platforms": ["apple", "android", "web"],
+  "name": "expo-cdnbye",
+  "platforms": [
+    "ios",
+    "android",
+    "web"
+  ],
   "apple": {
-    "modules": ["ExpoCdnbyeModule"]
+    "modules": [
+      "ExpoCdnbyeModule"
+    ]
   },
   "android": {
-    "modules": ["expo.modules.cdnbye.ExpoCdnbyeModule"]
+    "modules": [
+      "expo.modules.cdnbye.ExpoCdnbyeModule"
+    ]
   }
 }

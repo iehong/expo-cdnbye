@@ -10,21 +10,19 @@ npx expo install expo-cdnbye
 
 ### Config the plugins token
 
-```json
-#app.json
+Add CDNBYE_TOEKN to your `app.json`:
 
+```json
 {
   "expo": {
-  ...
     "plugins": [
       [
-        "expo-cdnbye",
+        "./node_modules/expo-cdnbye/app.plugin.js",
         {
           "token": "CDNBYE_TOKEN"
         }
       ]
     ]
-  ...
   }
 }
 ```
