@@ -1,6 +1,6 @@
 {
   "name": "expo-cdnbye",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "expo cdnbye sdk",
   "main": "index",
   "files": [
@@ -8,6 +8,8 @@
     "android",
     "ios",
     "app.plugin.js",
+    "index.ts",
+    "expo-module.config.json",
     "!android/.gradle",
     "!android/.idea",
     "!android/build",
@@ -23,6 +25,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iehong/expo-cdnbye.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "expo",
