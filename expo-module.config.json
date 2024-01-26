@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["ExpoCdnbyeModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.cdnbye.ExpoCdnbyeModule"]
+  }
+}

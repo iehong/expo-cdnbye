@@ -1,0 +1,44 @@
+{
+  "name": "expo-cdnbye",
+  "version": "1.0.0",
+  "description": "expo cdnbye sdk",
+  "main": "index",
+  "files": [
+    "src",
+    "android",
+    "ios",
+    "app.plugin.js",
+    "!android/.gradle",
+    "!android/.idea",
+    "!android/build",
+    "!android/src/testPlay",
+    "!ios/build",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iehong/expo-cdnbye.git"
+  },
+  "keywords": [
+    "expo",
+    "cdnbye",
+    "android"
+  ],
+  "author": "iehong <iehong@qq.com> (https://github.com/iehong)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iehong/expo-cdnbye/issues"
+  },
+  "homepage": "https://github.com/iehong/expo-cdnbye#readme",
+  "peerDependencies": {
+    "expo": "*"
+  },
+  "dependencies": {
+    "@expo/config-plugins": "^7.8.4"
+  }
+}
