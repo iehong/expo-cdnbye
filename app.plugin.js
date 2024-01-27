@@ -1,9 +1,10 @@
-const {
+import {
   withAndroidManifest,
   AndroidConfig,
   createRunOncePlugin,
-} = require("@expo/config-plugins");
-const withMyApiKey = (config, { token }) => {
+} from "@expo/config-plugins";
+import pkg from "./package.json";
+const withKey = (config, { token }) => {
   config = withAndroidManifest(config, (config) => {
     const mainApplication = AndroidConfig.Manifest.getMainApplicationOrThrow(
       config.modResults
@@ -15,8 +16,7 @@ const withMyApiKey = (config, { token }) => {
     );
     return config;
   });
-
   return config;
 };
-const pkg = require("./package.json");
-module.exports = createRunOncePlugin(withMyApiKey, pkg.name, pkg.version);
+
+exports.default = createRunOncePlugin(withKey, pkg.name, pkg.version);
