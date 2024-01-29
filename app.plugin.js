@@ -1,9 +1,9 @@
-import {
+const {
   withAndroidManifest,
   AndroidConfig,
   createRunOncePlugin,
-} from "@expo/config-plugins";
-import pkg from "./package.json";
+} = require("@expo/config-plugins");
+const pkg = require("./package.json");
 const withKey = (config, { token }) => {
   config = withAndroidManifest(config, (config) => {
     const mainApplication = AndroidConfig.Manifest.getMainApplicationOrThrow(
