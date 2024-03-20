@@ -4,6 +4,7 @@ const {
   createRunOncePlugin,
   withAppBuildGradle,
 } = require("@expo/config-plugins");
+const { resolve } = require("path");
 const pkg = require("./package.json");
 function addDependencies(buildGradle) {
   // 添加需要的仓库地址到repositories部分
