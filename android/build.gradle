@@ -71,6 +71,7 @@ android {
     targetSdkVersion safeExtGet("targetSdkVersion", 34)
     versionCode 1
     versionName "0.4.1"
+    consumerProguardFiles("proguard-rules.pro")
   }
   lintOptions {
     abortOnError false
@@ -78,11 +79,6 @@ android {
   publishing {
     singleVariant("release") {
       withSourcesJar()
-    }
-  }
-  buildTypes {
-    release {
-      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
     }
   }
 }
